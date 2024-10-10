@@ -15,6 +15,7 @@ import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -29,16 +30,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.personal.animeshpandey.stockup.RotateDotAnimation
 import com.personal.animeshpandey.stockup.ui.theme.backGround
 import com.personal.animeshpandey.stockup.ui.theme.primary
 import com.personal.animeshpandey.stockup.ui.viewmodel.StockViewModel
 import com.personal.animeshpandey.stockup.ui.viewmodel.screenUiState
+
 
 @Composable
 fun mainScreen(){
     val viewModel:StockViewModel = viewModel()
     var search by remember { mutableStateOf("") }
     val uiState by viewModel.currentStateViewonly.collectAsState()
+
+
     Column(modifier = Modifier.fillMaxSize()) {
         Row(modifier = Modifier.fillMaxWidth()) {
             OutlinedTextField(value = search, onValueChange = {search=it}, shape= RoundedCornerShape(16.dp))
@@ -54,6 +59,11 @@ fun mainScreen(){
                 is screenUiState.waiting->{
                     Row(modifier = Modifier.fillMaxWidth()) {
                         Text(text = "Fetching stocks")
+//                        LinearProgressIndicator()
+//                        CircularProgressIndicator()
+//                        CircularProgressIndicator(progress = 0.89f)
+                        RotateDotAnimation()
+
                     }
                 }
                 is screenUiState.responseSuccess->{
