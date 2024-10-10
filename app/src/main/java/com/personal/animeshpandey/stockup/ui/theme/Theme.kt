@@ -64,7 +64,7 @@ fun StockUpTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = myTypography,
         content = content
     )
 }
