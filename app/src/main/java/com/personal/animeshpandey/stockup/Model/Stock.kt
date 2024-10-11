@@ -1,6 +1,7 @@
 package com.personal.animeshpandey.stockup.Model
 
 import com.google.gson.annotations.SerializedName
+import java.lang.StringBuilder
 
 data class Stock(
     @SerializedName("01. symbol")
@@ -23,4 +24,12 @@ data class Stock(
     val change: String,
     @SerializedName("10. change percent")
     val changePercent: String
+)
+
+
+data class stockMetaData(
+    val name:String,
+    val region:String,
+    val type:String,
+    val currency:String
 )
