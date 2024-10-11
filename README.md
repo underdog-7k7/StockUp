@@ -6,6 +6,9 @@ Project setup:
 5) after the installation , you may search for your favourite stocks
 
 
+Project demo:
+https://github.com/user-attachments/assets/0fbd058c-c08a-4902-b8b2-66a2081a23d1
+
 
 
 
