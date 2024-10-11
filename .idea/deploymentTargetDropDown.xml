@@ -8,10 +8,16 @@
       <entry key="app">
         <State />
       </entry>
-      <entry key="test">
+      <entry key="errortest">
+        <State />
+      </entry>
+      <entry key="initialtest">
         <State />
       </entry>
       <entry key="test (1)">
+        <State />
+      </entry>
+      <entry key="waitingtest">
         <State />
       </entry>
     </value>

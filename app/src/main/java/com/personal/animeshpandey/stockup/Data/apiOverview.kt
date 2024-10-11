@@ -13,14 +13,14 @@ interface apiOverview {
     suspend fun getStockResponse(
         @Query("function") function: String = "GLOBAL_QUOTE",
         @Query("symbol") company: String,
-        @Query("apikey") apikey:String ="RKI65X3VAG02N4DB" //dummy api key , does not work
+        @Query("apikey") apikey:String = BuildConfig.AlphaVantageKey
     ): ResponseObject
 
     @GET("/query")
     suspend fun getPossibleStocks(
         @Query("function") function:String = "SYMBOL_SEARCH",
         @Query("keywords") keywords:String,
-        @Query("apikey") apikey:String ="RKI65X3VAG02N4DB"
+        @Query("apikey") apikey:String =BuildConfig.AlphaVantageKey
      ): SearchMatchResponseObject
 }
 

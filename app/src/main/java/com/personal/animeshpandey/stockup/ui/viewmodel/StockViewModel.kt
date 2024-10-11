@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.personal.animeshpandey.stockup.Data.retrofitObjectforStocks
 import com.personal.animeshpandey.stockup.Model.PossibleStocks
 import com.personal.animeshpandey.stockup.Model.Stock
-import com.personal.animeshpandey.stockup.Model.stockMetaData
+import com.personal.animeshpandey.stockup.Model.StockMetaData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -66,7 +66,7 @@ class StockViewModel :ViewModel(){
                     async {
                         val stock = fetchStockDetails(possibleStock.symbol)
                         if(stock!=null){
-                            val metaData = stockMetaData(possibleStock.name,possibleStock.region,possibleStock.type,possibleStock.currency)
+                            val metaData = StockMetaData(possibleStock.name,possibleStock.region,possibleStock.type,possibleStock.currency)
                             Pair(stock,metaData)
                         }else{
                             null
@@ -107,6 +107,6 @@ class StockViewModel :ViewModel(){
 sealed class screenUiState{
     object initial:screenUiState()
     data class waiting(val message:String):screenUiState()
-    data class responseSuccess(val stocksAndDetails: List<Pair<Stock, stockMetaData>>):screenUiState()
+    data class responseSuccess(val stocksAndDetails: List<Pair<Stock, StockMetaData>>):screenUiState()
     data class responseError(val message:String):screenUiState()
 }

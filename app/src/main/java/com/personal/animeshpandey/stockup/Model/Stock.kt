@@ -27,7 +27,7 @@ data class Stock(
 )
 
 
-data class stockMetaData(
+data class StockMetaData(
     val name:String,
     val region:String,
     val type:String,
