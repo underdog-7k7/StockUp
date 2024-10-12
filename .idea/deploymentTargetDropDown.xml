@@ -6,15 +6,28 @@
         <State />
       </entry>
       <entry key="app">
-        <State />
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\anime\.android\avd\Pixel_8_Pro-_Device_2.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-10-11T04:27:21.508529500Z" />
+        </State>
       </entry>
       <entry key="errortest">
         <State />
       </entry>
-      <entry key="initialtest">
+      <entry key="test (1)">
         <State />
       </entry>
-      <entry key="test (1)">
+      <entry key="waiting">
         <State />
       </entry>
       <entry key="waitingtest">

@@ -57,6 +57,7 @@ import com.personal.animeshpandey.stockup.Model.Stock
 import com.personal.animeshpandey.stockup.Model.StockMetaData
 import com.personal.animeshpandey.stockup.R
 import com.personal.animeshpandey.stockup.RotateDotAnimation
+import com.personal.animeshpandey.stockup.RotatingCircle
 import com.personal.animeshpandey.stockup.ui.theme.anti
 import com.personal.animeshpandey.stockup.ui.theme.backGround
 import com.personal.animeshpandey.stockup.ui.theme.backGroundDark
@@ -117,7 +118,7 @@ fun StockCard(stockDetails: Pair<Stock,StockMetaData>, modifier: Modifier = Modi
                     .height(IntrinsicSize.Min),shape = RoundedCornerShape(12.dp),
                     elevation = CardDefaults.cardElevation(16.dp), colors = CardDefaults.cardColors(containerColor = changeColor)) {
                     Text(
-                        text = "${stock.changePercent}",
+                        text = "${stock.changePercent}".slice(0..3)+"%",
                         style = MaterialTheme.typography.bodyMedium.copy(
                             fontSize = 20.sp,
                             fontWeight = FontWeight.SemiBold,
@@ -337,7 +338,7 @@ fun waitingScreen(message: String) {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                RotateDotAnimation()
+                RotatingCircle()
             }
         }
     }
@@ -375,9 +376,8 @@ fun errorscreen(error:String){
 
 @Preview(showBackground = true)
 @Composable
-fun errortest(){
-    val message = "This is a random error while fetching the reponse"
-    errorscreen(message)
+fun waiting(){
+    waitingScreen(message = "this is a waiting message that is being displayed")
 }
 
 

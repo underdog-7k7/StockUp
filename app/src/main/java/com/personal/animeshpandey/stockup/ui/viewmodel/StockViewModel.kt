@@ -33,7 +33,7 @@ class StockViewModel :ViewModel(){
                 if (possibleStocks != null) {
                     fetchTopStocks(possibleStocks)
                 } else {
-                    updateAllStateError("The connection broke off, try again...")
+                    updateAllStateError("No entities for the given search... A typo maybe?")
                 }
             } catch (e: Exception) {
                 updateAllStateError(e.message ?: "idk")
