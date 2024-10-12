@@ -60,63 +60,13 @@ fun RotateDotAnimation() {
 
 
 @Composable
-fun SquareFillLoaderAnimation() {
-
-    val infiniteTransition = rememberInfiniteTransition()
-
-    var rotation by remember {
-        mutableStateOf(0f)
-    }
-    var height by remember {
-        mutableStateOf(0f)
-    }
-
-    LaunchedEffect(key1 = Unit, block = {
-        while (true) {
-            animate(
-                0f,
-                180f,
-                animationSpec = tween(500, easing = LinearEasing),
-                block = { value, _ -> rotation = value }
-            )
-            animate(
-                400f, 0f,
-                animationSpec = tween(1000, easing = LinearEasing),
-                block = { value, _ -> height = value }
-            )
-        }
-    })
-
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-
-        Canvas(modifier = Modifier.wrapContentSize()) {
-            val topLeft = Offset(this.center.x - 200f, this.center.y - 200f)
-            rotate(degrees = rotation) {
-                drawRect(
-                    Color.White, topLeft, size = Size(400f, 400f),
-                    style = Stroke(width = 20f)
-                )
-            }
-
-            drawRect(
-                Color.White, topLeft, size = Size(400f, height)
-            )
-
-        }
-    }
-}
-
-@Composable
 fun RotatingCircle() {
 
     var xRotation by remember {
-        mutableFloatStateOf(0f)
+        mutableStateOf(0f)
     }
     var yRotation by remember {
-        mutableFloatStateOf(0f)
+        mutableStateOf(0f)
     }
 
     LaunchedEffect(key1 = Unit, block = {
@@ -142,12 +92,12 @@ fun RotatingCircle() {
     ) {
         Box(
             modifier = Modifier
-                .size(160.dp)
+                .size(100.dp)
                 .graphicsLayer {
                     rotationX = xRotation
                     rotationY = yRotation
                 }
-                .background(Color.Black, CircleShape)
+                .background(Color.White, CircleShape)
         )
     }
 }
