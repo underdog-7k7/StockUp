@@ -16,7 +16,11 @@ Project Migration/Setup(for manually running the project):
 3) Import all the explicitly mentioned dependencies in the app.build.gradle.kts and sync the build
 4) Get your api key from https://www.alphavantage.co/support/#api-key
 5) in the apiOverview.kt file , replace BuildConfig.AlphaVantageKey with a string that encloses your api key
-6) proceed to build and run the project on an AVD or any other android device  
+6) Enable Internet permissions in your new projects Manifest file(important)
+7) proceed to build and run the project on an AVD or any other android device
+
+
+   
 
 
 
