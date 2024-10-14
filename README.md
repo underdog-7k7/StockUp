@@ -11,12 +11,12 @@ https://github.com/user-attachments/assets/47eb812a-e3d9-43ec-8299-18998efc6b53
 
 Project Migration/Setup(for manually running the project):
 
-1)Clone this project in a separate folder
-2)Create a new project in android studio with an empty activity and compose
-3)Import all the explicitly mentioned dependencies in the app.build.gradle.kts and sync the build
-4)Get your api key from https://www.alphavantage.co/support/#api-key
-5)in the apiOverview.kt file , replace BuildConfig.AlphaVantageKey with a string that encloses your api key
-6)proceed to build and run the project on an AVD or any other android device  
+1) Clone this project in a separate folder
+2) Create a new project in android studio with an empty activity and compose
+3) Import all the explicitly mentioned dependencies in the app.build.gradle.kts and sync the build
+4) Get your api key from https://www.alphavantage.co/support/#api-key
+5) in the apiOverview.kt file , replace BuildConfig.AlphaVantageKey with a string that encloses your api key
+6) proceed to build and run the project on an AVD or any other android device  
 
 
 
