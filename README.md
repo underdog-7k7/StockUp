@@ -20,8 +20,8 @@ Project Migration/Setup(for manually running the project):
 
 
 Project demo video:
-https://github.com/user-attachments/assets/47eb812a-e3d9-43ec-8299-18998efc6b53
 
+https://github.com/user-attachments/assets/0c63ab26-c393-4ad6-a219-417fea483947
    
 
 
